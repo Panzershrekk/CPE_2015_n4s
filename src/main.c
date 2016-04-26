@@ -18,11 +18,11 @@ int			main(void)
   my_putstr("START_SIMULATION\n");
   s = get_next_line(0);
   my_puterror(s);
-  /*my_putstr("CAR_FORWARD:");
+  my_putstr("CAR_FORWARD:");
   my_put_nbr(1);
   my_putchar('\n');
   s = get_next_line(0);
-  my_puterror(s);*/
-  while (42);
+  my_puterror(s);
+  while (0);
   return (0);
 }

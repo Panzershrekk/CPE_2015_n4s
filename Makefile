@@ -21,7 +21,7 @@ all:		$(NAME)
 
 
 $(NAME):	$(OBJ)
-		cc -o $(NAME) $(OBJ) -W -Wall -Werror
+		cc -o $(NAME) $(OBJ) -W -Wall -Werror -Iinc
 
 clean:
 		rm -f $(OBJ)
