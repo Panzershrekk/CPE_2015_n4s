@@ -5,7 +5,7 @@
 ** Login   <fossae_t@epitech.net>
 **
 ** Started on  Tue Apr 26 10:43:00 2016 Thomas Fossaert
-** Last update Tue Apr 26 11:54:02 2016 Thomas Fossaert
+** Last update Tue Apr 26 14:08:02 2016 Thomas Fossaert
 */
 
 #include		<unistd.h>
@@ -15,16 +15,19 @@ void			my_putchar(char c)
   write(1, &c, 1);
 }
 
-void			my_putstr(char *str)
+int			my_strlen(char *str)
 {
   int			i;
 
   i = 0;
   while (str[i] != '\0')
-    {
-      my_putchar(str[i]);
-      i++;
-    }
+    i++;
+  return (i);
+}
+
+void			my_putstr(char *str)
+{
+  write(1, str, my_strlen(str));
 }
 
 void			my_put_nbr(int nb)
