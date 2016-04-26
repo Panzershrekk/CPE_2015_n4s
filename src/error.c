@@ -5,12 +5,12 @@
 ** Login   <fossae_t@epitech.net>
 **
 ** Started on  Thu Apr 14 19:11:32 2016 Thomas Fossaert
-** Last update Tue Apr 26 14:05:05 2016 Thomas Fossaert
+** Last update Tue Apr 26 15:54:24 2016 Thomas Fossaert
 */
 
 #include	<unistd.h>
 #include	<stdlib.h>
-#include	"my.h"
+#include	"../inc/my.h"
 
 void		my_putcharerror(char c)
 {
