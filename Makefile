@@ -5,13 +5,14 @@
 ## Login   <fossae_t@epitech.net>
 ## 
 ## Started on  Tue Apr 26 10:40:15 2016 Thomas Fossaert
-## Last update Tue Apr 26 16:25:08 2016 Thomas Fossaert
+## Last update Wed Apr 27 15:25:30 2016 Thomas Fossaert
 ##
 
 SRC=		src/main.c \
 		src/error.c \
 		src/get_next_line.c \
 		src/str_to_wordatab.c \
+		src/best_driver.c \
 		src/fonction.c
 
 OBJ=            $(SRC:.c=.o)

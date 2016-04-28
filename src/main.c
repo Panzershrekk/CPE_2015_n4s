@@ -5,7 +5,7 @@
 ** Login   <fossae_t@epitech.net>
 **
 ** Started on  Tue Apr 26 10:38:38 2016 Thomas Fossaert
-** Last update Tue Apr 26 17:25:29 2016 Thomas Fossaert
+** Last update Wed Apr 27 17:19:22 2016 Thomas Fossaert
 */
 
 #include		<stdlib.h>
@@ -54,13 +54,14 @@ int			main(void)
 
   my_putstr("START_SIMULATION\n");
   s = get_next_line(0);
-  my_puterror(s);
-  my_putstr("CAR_FORWARD:1\n");
+  my_putstr("CAR_FORWARD:0.3\n");
   s = get_next_line(0);
-  my_puterror(s);
-  my_putstr("GET_INFO_LIDAR\n");
-  s = get_next_line(0);
-  info = my_sto_info(info, s);
-  while (42);
+  while (42)
+    {
+      my_putstr("GET_INFO_LIDAR\n");
+      s = get_next_line(0);
+      info = my_sto_info(info, s);
+      my_best_driver(info, s);
+    }
   return (0);
 }
