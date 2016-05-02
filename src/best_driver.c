@@ -5,7 +5,7 @@
 ** Login   <fossae_t@epitech.net>
 **
 ** Started on  Wed Apr 27 15:18:36 2016 Thomas Fossaert
-** Last update Mon May  2 13:24:42 2016 Thomas Fossaert
+** Last update Mon May  2 13:36:50 2016 Thomas Fossaert
 */
 
 #include		"../inc/my.h"
@@ -37,11 +37,6 @@ void			manage_speed(float *info, char *s)
 
 void			power_left(float *info, char *s)
 {
-  /*if (info[31] > 400)
-    {
-      my_putstr("WHEELS_DIR:0\n");
-      s = get_next_line(0);
-      }*/
   if (info[31] <= 390)
     {
       my_putstr("WHEELS_DIR:0.3\n");
@@ -56,11 +51,6 @@ void			power_left(float *info, char *s)
 
 void			power_right(float *info, char *s)
 {
-  /*if (info[0] > 400)
-    {
-      my_putstr("WHEELS_DIR:0\n");
-      s = get_next_line(0);
-      }*/
   if (info[0] <= 390)
     {
       my_putstr("WHEELS_DIR:-0.3\n");
@@ -75,7 +65,7 @@ void			power_right(float *info, char *s)
 
 void			my_best_driver(float *info, char *s)
 {
-  if (info[15] > 500)
+  if (info[15] > 700)
     {
       my_putstr("WHEELS_DIR:0\n");
       s = get_next_line(0);
