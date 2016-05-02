@@ -5,7 +5,7 @@
 ** Login   <fossae_t@epitech.net>
 **
 ** Started on  Wed Apr 27 15:18:36 2016 Thomas Fossaert
-** Last update Mon May  2 12:42:31 2016 Thomas Fossaert
+** Last update Mon May  2 13:24:42 2016 Thomas Fossaert
 */
 
 #include		"../inc/my.h"
@@ -13,25 +13,25 @@
 
 void			manage_speed(float *info, char *s)
 {
-  if (info[15] <= 1000)
+  if (info[15] <= /*1000*/750)
     {
       my_putstr("CAR_FORWARD:0.3\n");
       s = get_next_line(0);
     }
-  else if (info[15] <= 1500)
+  else if (info[15] <= /*1500*/1000)
     {
       my_putstr("CAR_FORWARD:0.6\n");
       s = get_next_line(0);
     }
-  else if (info[15] <= 2500)
+  else if (info[15] <= /*2500*/1500)
     {
       my_putstr("CAR_FORWARD:0.8\n");
       s = get_next_line(0);
     }
-  else if (info[15] > 2500)
-    {
-      my_putstr("CAR_FORWARD:1\n");
-      s = get_next_line(0);
+  else if (info[15] > /*2500*/1500)
+  {
+    my_putstr("CAR_FORWARD:1\n");
+    s = get_next_line(0);
   }
 }
 
@@ -75,8 +75,7 @@ void			power_right(float *info, char *s)
 
 void			my_best_driver(float *info, char *s)
 {
-  my_put_nbr(info[15]);
-  if (/*info[0] > 400 && info[31] > 400*/ info[15] > 500)
+  if (info[15] > 500)
     {
       my_putstr("WHEELS_DIR:0\n");
       s = get_next_line(0);
