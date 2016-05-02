@@ -5,7 +5,7 @@
 ** Login   <fossae_t@epitech.net>
 **
 ** Started on  Tue Apr 26 10:38:38 2016 Thomas Fossaert
-** Last update Wed Apr 27 17:19:22 2016 Thomas Fossaert
+** Last update Thu Apr 28 17:16:54 2016 Thomas Fossaert
 */
 
 #include		<stdlib.h>
@@ -18,7 +18,7 @@ char			*epur_s(char *str, char *tmp)
   int			j;
 
   i = 0;
-  j= 21;
+  j = 21;
   tmp = malloc(sizeof(char) * my_strlen(str) -21);
   while (str[j] != '\0')
     {
@@ -54,7 +54,7 @@ int			main(void)
 
   my_putstr("START_SIMULATION\n");
   s = get_next_line(0);
-  my_putstr("CAR_FORWARD:0.3\n");
+  my_putstr("CAR_FORWARD:0.9\n");
   s = get_next_line(0);
   while (42)
     {
