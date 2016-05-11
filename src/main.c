@@ -5,7 +5,7 @@
 ** Login   <fossae_t@epitech.net>
 **
 ** Started on  Tue Apr 26 10:38:38 2016 Thomas Fossaert
-** Last update Thu Apr 28 17:16:54 2016 Thomas Fossaert
+** Last update Wed May 11 15:53:58 2016 Thomas Fossaert
 */
 
 #include		<stdlib.h>
@@ -54,7 +54,7 @@ int			main(void)
 
   my_putstr("START_SIMULATION\n");
   s = get_next_line(0);
-  my_putstr("CAR_FORWARD:0.9\n");
+  my_putstr("CAR_FORWARD:0.5\n");
   s = get_next_line(0);
   while (42)
     {
@@ -62,6 +62,7 @@ int			main(void)
       s = get_next_line(0);
       info = my_sto_info(info, s);
       my_best_driver(info, s);
+      free(info);
     }
   return (0);
 }
