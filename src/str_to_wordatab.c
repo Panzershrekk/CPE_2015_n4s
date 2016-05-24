@@ -5,7 +5,7 @@
 ** Login   <fossae_t@epitech.net>
 **
 ** Started on  Tue Apr 26 15:50:15 2016 Thomas Fossaert
-** Last update Tue Apr 26 16:30:06 2016 Thomas Fossaert
+** Last update Tue May 24 10:07:40 2016 Thomas Fossaert
 */
 
 #include	<stdlib.h>
@@ -81,4 +81,19 @@ char		**my_str_to_wordtab(char *str)
   recup_words(tab, str, nb_words);
   tab[nb_words] = NULL;
   return (tab);
+}
+
+int		my_strncmp(char *s1, char *s2, int n)
+{
+  int		i;
+
+  i = 0;
+  while (s1[i] == s2[i] && s1[i] && s2[i] && i < n )
+    i++;
+  if ((s1[i] == '\0' && s2[i] == '\0') || i == n)
+    return (0);
+  else if (s1[i] > s2[i])
+    return (1);
+  else
+    return (-1);
 }

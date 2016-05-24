@@ -5,10 +5,11 @@
 ** Login   <fossae_t@epitech.net>
 **
 ** Started on  Tue Apr 26 10:38:38 2016 Thomas Fossaert
-** Last update Wed May 11 15:53:58 2016 Thomas Fossaert
+** Last update Tue May 24 12:48:04 2016 Thomas Fossaert
 */
 
 #include		<stdlib.h>
+#include		<stdio.h>
 #include		"../inc/my.h"
 #include		"get_next_line.h"
 
