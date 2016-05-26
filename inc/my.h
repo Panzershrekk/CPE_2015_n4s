@@ -5,7 +5,7 @@
 ** Login   <fossae_t@epitech.net>
 **
 ** Started on  Tue Feb  9 15:42:08 2016 Fossaert Thomas
-** Last update Wed Apr 27 15:29:56 2016 Thomas Fossaert
+** Last update Thu May 26 15:04:05 2016 Thomas HUGUET
 */
 
 #ifndef		_MY_H_
@@ -17,7 +17,7 @@ void		my_putchar(char c);
 void		my_puterror(char *str);
 void		my_putstr(char *str);
 void		my_put_nbr(int i);
-char		**my_str_to_wordtab(char *str);
+char		**my_str_to_wordtab(char *str, char *);
 int		my_getnbr(char *str);
 
 #endif		/* _MY_H_ */

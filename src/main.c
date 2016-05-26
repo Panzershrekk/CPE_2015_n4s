@@ -5,7 +5,7 @@
 ** Login   <fossae_t@epitech.net>
 **
 ** Started on  Tue Apr 26 10:38:38 2016 Thomas Fossaert
-** Last update Tue May 24 12:48:04 2016 Thomas Fossaert
+** Last update Thu May 26 15:06:06 2016 Thomas HUGUET
 */
 
 #include		<stdlib.h>
@@ -38,7 +38,7 @@ float			*my_sto_info(float *info, char *s)
 
   i = 0;
   tmp = epur_s(s, tmp);
-  tmp_dou = my_str_to_wordtab(tmp);
+  tmp_dou = my_str_to_wordtab(tmp, ":");
   info = malloc(sizeof(float) * 32);
   while (i != 32)
     {

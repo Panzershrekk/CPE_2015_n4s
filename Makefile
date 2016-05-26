@@ -5,13 +5,13 @@
 ## Login   <fossae_t@epitech.net>
 ## 
 ## Started on  Tue Apr 26 10:40:15 2016 Thomas Fossaert
-## Last update Wed Apr 27 15:25:30 2016 Thomas Fossaert
+## Last update Thu May 26 15:04:37 2016 Thomas HUGUET
 ##
 
 SRC=		src/main.c \
 		src/error.c \
 		src/get_next_line.c \
-		src/str_to_wordatab.c \
+		src/my_str_to_wordtab.c \
 		src/best_driver.c \
 		src/fonction.c
 
