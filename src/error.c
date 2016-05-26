@@ -5,11 +5,12 @@
 ** Login   <fossae_t@epitech.net>
 **
 ** Started on  Thu Apr 14 19:11:32 2016 Thomas Fossaert
-** Last update Tue May 24 13:25:00 2016 Thomas Fossaert
+** Last update Thu May 26 11:29:20 2016 Thomas Fossaert
 */
 
 #include	<unistd.h>
 #include	<stdlib.h>
+#include	"get_next_line.h"
 #include	"../inc/my.h"
 
 void		my_putcharerror(char c)
@@ -21,6 +22,7 @@ void		my_puterror(char *str)
 {
   int		i;
   int		j;
+  char		*s;
   const char	*track;
 
   i = 0;
@@ -38,5 +40,11 @@ void		my_puterror(char *str)
       i++;
     }
   if (j > 12)
-    my_putstr("STOP_SIMULATION\n");
+    {
+      my_putstr("CAR_BACKWARDS:0\n");
+      s = get_next_line(0);
+      my_putstr("CYCLE_WAIT:3\n");
+      s = get_next_line(0);
+      my_putstr("STOP_SIMULATION\n");
+    }
 }

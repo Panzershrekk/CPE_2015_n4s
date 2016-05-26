@@ -5,7 +5,7 @@
 ** Login   <fossae_t@epitech.net>
 **
 ** Started on  Wed Apr 27 15:18:36 2016 Thomas Fossaert
-** Last update Tue May 24 13:14:25 2016 Thomas Fossaert
+** Last update Thu May 26 11:30:02 2016 Thomas Fossaert
 */
 
 #include		<stdio.h>
@@ -38,24 +38,24 @@ void			check_back(float *info, char *s)
 
 void			manage_speed(float *info, char *s)
 {
-  if (info[15] <= 1000/*850*/)
+  if (info[15] <= 800)
     {
-      my_putstr("CAR_FORWARD:0.25\n");
+      my_putstr("CAR_FORWARD:0.3\n");
       s = get_next_line(0);
     }
-  else if (info[15] <= 1500)
+  else if (info[15] <= 1000)
     {
       my_putstr("CAR_FORWARD:0.5\n");
       s = get_next_line(0);
     }
-  else if (info[15] <= 2500)
+  else if (info[15] <= 1500)
     {
-      my_putstr("CAR_FORWARD:0.8\n");
+      my_putstr("CAR_FORWARD:0.7\n");
       s = get_next_line(0);
     }
-  else if (info[15] > 2500)
+  else if (info[15] > 1500)
   {
-    my_putstr("CAR_FORWARD:1\n");
+    my_putstr("CAR_FORWARD:0.9\n");
     s = get_next_line(0);
   }
 }
@@ -72,7 +72,7 @@ void			power_left(float *info, char *s)
       my_putstr("WHEELS_DIR:0.3\n");
       s = get_next_line(0);
     }
-  else if (info[30] <= 430)
+  else if (info[31] <= 430)
     {
       my_putstr("WHEELS_DIR:0.25\n");
       s = get_next_line(0);
@@ -86,12 +86,12 @@ void			power_right(float *info, char *s)
       my_putstr("WHEELS_DIR:-0.35\n");
       s = get_next_line(0);
     }
-  else if (info[0] <= 390)
+  else if (info[1] <= 390)
     {
       my_putstr("WHEELS_DIR:-0.3\n");
       s = get_next_line(0);
     }
-  else if (info[1] <= 430)
+  else if (info[0] <= 430)
     {
       my_putstr("WHEELS_DIR:-0.25\n");
       s = get_next_line(0);
@@ -108,7 +108,7 @@ void			my_best_driver(float *info, char *s)
       s = get_next_line(0);
       my_puterror(s);
     }
-  if (info[15] < 800 || (info[0] < 200 || info[31] < 200))
+  if (info[15] < 800 || (info[0] < 150 || info[31] < 150))
     {
       power_left(info, s);
       power_right(info, s);
