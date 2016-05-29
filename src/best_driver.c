@@ -5,7 +5,7 @@
 ** Login   <fossae_t@epitech.net>
 **
 ** Started on  Wed Apr 27 15:18:36 2016 Thomas Fossaert
-** Last update Sun May 29 18:35:37 2016 Thomas Fossaert
+** Last update Sun May 29 18:39:28 2016 Thomas Fossaert
 */
 
 #include		<stdio.h>
@@ -13,7 +13,7 @@
 #include		"../inc/my.h"
 #include		"get_next_line.h"
 
-void			check_back(float *info, char *s)
+void			check_back(int *info, char *s)
 {
   if (info[15] <= 150 && info[31] > info[0])
     {
@@ -37,7 +37,7 @@ void			check_back(float *info, char *s)
     }
 }
 
-void			manage_speed(float *info, char *s)
+void			manage_speed(int *info, char *s)
 {
   if (info[15] <= 400)
     {
@@ -66,7 +66,7 @@ void			manage_speed(float *info, char *s)
     }
 }
 
-void			power_left(float *info, char *s)
+void			power_left(int *info, char *s)
 {
   if (info[31] <= 280)
     {
@@ -85,7 +85,7 @@ void			power_left(float *info, char *s)
     }
 }
 
-void			power_right(float *info, char *s)
+void			power_right(int *info, char *s)
 {
   if (info[0] <= 280)
     {
@@ -104,7 +104,7 @@ void			power_right(float *info, char *s)
     }
 }
 
-void			my_best_driver(float *info, char *s)
+void			my_best_driver(int *info, char *s)
 {
   check_back(info, s);
   my_puterror(s);

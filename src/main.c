@@ -5,7 +5,7 @@
 ** Login   <fossae_t@epitech.net>
 **
 ** Started on  Tue Apr 26 10:38:38 2016 Thomas Fossaert
-** Last update Sun May 29 18:10:13 2016 Thomas Fossaert
+** Last update Sun May 29 18:38:47 2016 Thomas Fossaert
 */
 
 #include		<stdlib.h>
@@ -30,7 +30,7 @@ char			*epur_s(char *str, char *tmp)
   return (tmp);
 }
 
-float			*my_sto_info(float *info, char *s)
+int			*my_sto_info(int *info, char *s)
 {
   int			i;
   char			*tmp;
@@ -39,7 +39,7 @@ float			*my_sto_info(float *info, char *s)
   i = 0;
   tmp = epur_s(s, tmp);
   tmp_dou = my_str_to_wordtab(tmp, ":");
-  info = malloc(sizeof(float) * 32);
+  info = malloc(sizeof(int) * 32);
   while (i != 32)
     {
       info[i] = my_getnbr(tmp_dou[i]);
@@ -51,7 +51,7 @@ float			*my_sto_info(float *info, char *s)
 int			main(void)
 {
   char			*s;
-  float			*info;
+  int			*info;
 
   my_putstr("START_SIMULATION\n");
   s = get_next_line(0);
