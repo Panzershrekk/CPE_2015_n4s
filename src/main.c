@@ -5,7 +5,7 @@
 ** Login   <fossae_t@epitech.net>
 **
 ** Started on  Tue Apr 26 10:38:38 2016 Thomas Fossaert
-** Last update Thu May 26 15:06:06 2016 Thomas HUGUET
+** Last update Sun May 29 18:10:13 2016 Thomas Fossaert
 */
 
 #include		<stdlib.h>
@@ -64,6 +64,7 @@ int			main(void)
       info = my_sto_info(info, s);
       my_best_driver(info, s);
       free(info);
+      my_puterror(s);
     }
   return (0);
 }

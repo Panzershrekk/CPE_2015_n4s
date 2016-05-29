@@ -5,7 +5,7 @@
 ** Login   <fossae_t@epitech.net>
 **
 ** Started on  Thu Apr 14 19:11:32 2016 Thomas Fossaert
-** Last update Thu May 26 15:01:35 2016 Thomas HUGUET
+** Last update Sun May 29 18:07:20 2016 Thomas Fossaert
 */
 
 #include	<unistd.h>
@@ -16,6 +16,18 @@
 void		my_putcharerror(char c)
 {
   write(2, &c, 1);
+}
+
+void		check_end(int j, char *s)
+{
+  if (j > 12)
+    {
+      my_putstr("CAR_BACKWARDS:0\n");
+      s = get_next_line(0);
+      my_putstr("CYCLE_WAIT:3\n");
+      s = get_next_line(0);
+      my_putstr("STOP_SIMULATION\n");
+    }
 }
 
 void		my_puterror(char *str)
@@ -39,12 +51,5 @@ void		my_puterror(char *str)
 	}
       i++;
     }
-  if (j > 12)
-    {
-      my_putstr("CAR_BACKWARDS:0\n");
-      s = get_next_line(0);
-      my_putstr("CYCLE_WAIT:3\n");
-      s = get_next_line(0);
-      my_putstr("STOP_SIMULATION\n");
-    }
+  check_end(j, s);
 }
