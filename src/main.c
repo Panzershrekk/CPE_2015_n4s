@@ -5,7 +5,7 @@
 ** Login   <fossae_t@epitech.net>
 **
 ** Started on  Tue Apr 26 10:38:38 2016 Thomas Fossaert
-** Last update Sun May 29 18:38:47 2016 Thomas Fossaert
+** Last update Sun May 29 22:50:23 2016 Thomas Fossaert
 */
 
 #include		<stdlib.h>
@@ -30,6 +30,19 @@ char			*epur_s(char *str, char *tmp)
   return (tmp);
 }
 
+void		my_free_double(char **buffer)
+{
+  int		i;
+
+  i = 0;
+  while (buffer[i] != '\0')
+    {
+      free(buffer[i]);
+      i++;
+    }
+  free(buffer);
+}
+
 int			*my_sto_info(int *info, char *s)
 {
   int			i;
@@ -45,7 +58,26 @@ int			*my_sto_info(int *info, char *s)
       info[i] = my_getnbr(tmp_dou[i]);
       i++;
     }
+  my_free_double(tmp_dou);
   return (info);
+}
+
+void			check_extreme(int *info, char *s)
+{
+  if (info[0] <= 150)
+    {
+      my_putstr("WHEELS_DIR:-0.05\n");
+      s = get_next_line(0);
+      my_putstr("CYCLE_WAIT:2\n");
+      s = get_next_line(0);
+    }
+  if (info[31] <= 150)
+    {
+      my_putstr("WHEELS_DIR:0.05\n");
+      s = get_next_line(0);
+      my_putstr("CYCLE_WAIT:2\n");
+      s = get_next_line(0);
+    }
 }
 
 int			main(void)

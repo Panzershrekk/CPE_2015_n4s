@@ -5,7 +5,7 @@
 ** Login   <thomas@epitech.net>
 **
 ** Started on  Thu Apr 21 10:03:09 2016 Thomas HUGUET
-** Last update Wed May 11 11:59:17 2016 Thomas HUGUET
+** Last update Sun May 29 22:40:39 2016 Thomas Fossaert
 */
 
 #include	<stdlib.h>
@@ -81,8 +81,7 @@ char		**recup_words(char **tab, char *str, char *separator)
 	  i++;
 	  j++;
 	}
-      if ((tab[word] = malloc(sizeof(char *) * (j + 1))) == NULL)
-	exit(0);
+      tab[word] = malloc(sizeof(char *) * (j + 1));
       tab[word] = fill_tab_line(tab[word], str, tmp, separator);
       word++;
     }
@@ -97,8 +96,7 @@ char		**my_str_to_wordtab(char *str, char *separator)
   nb_words = count_words(str, separator);
   if (nb_words == 0)
     return (NULL);
-  if ((tab = malloc(sizeof(char **) * (nb_words + 1))) == NULL)
-    exit(0);
+  tab = malloc(sizeof(char **) * (nb_words + 1));
   tab = recup_words(tab, str, separator);
   tab[nb_words] = NULL;
   return (tab);

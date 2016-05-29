@@ -5,7 +5,7 @@
 ** Login   <fossae_t@epitech.net>
 **
 ** Started on  Thu Apr 14 19:11:32 2016 Thomas Fossaert
-** Last update Sun May 29 18:07:20 2016 Thomas Fossaert
+** Last update Sun May 29 22:14:11 2016 Thomas Fossaert
 */
 
 #include	<unistd.h>
@@ -35,12 +35,13 @@ void		my_puterror(char *str)
   int		i;
   int		j;
   char		*s;
-  const char	*track;
+  char		*track;
 
   i = 0;
   j = 0;
   if (str[2] != 'O')
     write(2, str, my_strlen(str));
+  track = malloc(sizeof(char) * 14);
   track = "Track Cleared\0";
   while (str[i])
     {

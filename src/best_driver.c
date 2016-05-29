@@ -5,7 +5,7 @@
 ** Login   <fossae_t@epitech.net>
 **
 ** Started on  Wed Apr 27 15:18:36 2016 Thomas Fossaert
-** Last update Sun May 29 18:39:28 2016 Thomas Fossaert
+** Last update Sun May 29 22:18:55 2016 Thomas Fossaert
 */
 
 #include		<stdio.h>
@@ -121,6 +121,8 @@ void			my_best_driver(int *info, char *s)
       power_right(info, s);
       my_puterror(s);
     }
+  check_extreme(info, s);
+  my_puterror(s);
   manage_speed(info, s);
   my_puterror(s);
 }
